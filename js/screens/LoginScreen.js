@@ -243,12 +243,11 @@ class Login extends BaseComponent {
       }
       loginUser(dataUser);
     };
-    let dbfirebase = firebase.firestore().collection("users");
-    async function loginUser(data){
-      const resultEmail = await dbfirebase
+     async function loginUser(data){
+      const resultEmail = await firebase.firestore().collection("users")
       .where("email","==", data.email)
       .get();
-      const result = await dbfirebase
+      const result = await firebase.firestore().collection("users")
       .where("email","==", data.email)
       .where("password","==", data.password)
       .get();

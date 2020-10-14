@@ -991,12 +991,12 @@ class Header extends BaseComponent {
   
 		<div class="profile-card-inf">
 		  <div class="profile-card-inf__item">
-			<div class="profile-card-inf__title">1598</div>
+			<div class="profile-card-inf__title">0</div>
 			<div class="profile-card-inf__txt">Followers</div>
 		  </div>
   
 		  <div class="profile-card-inf__item">
-			<div class="profile-card-inf__title">65</div>
+			<div class="profile-card-inf__title">0</div>
 			<div class="profile-card-inf__txt">Following</div>
 		  </div>
   

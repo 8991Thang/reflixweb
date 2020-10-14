@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflix Webflix</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/aeafc74a1b.js" crossorigin="anonymous"></script>
+    <!-- owlCarousel -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+   <!-- wow-js -->
+   <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+   <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+    <!-- file css -->
+    <link rel="shortcut icon" type="image/png" href="./img/logo/movie-website-2055755-1733976.png">
+    <link rel="stylesheet" href="./css/owlCarousel.css">
+    <link rel="stylesheet" href="./css/news-update.css">
+    <link rel="stylesheet" href="./css/preloader.css">
+    <!-- router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/navigo/7.1.2/navigo.min.js"></script> 
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <!-- font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- preloader start -->
+    <div class="preload"></div>
+    <!-- preloader end -->
+    <!-- scroll bar -->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <header-component></header-component>
+    <intro-component></intro-component>
+    <div class="center">
+        <div class="center__movie">
+            <div class="wow bounceInUp" data-wow-duration="1s" data-wow-offset="100">
+                <div class="list-movie">
+                    <a href="#" class="list-movie-text">
+                        <img src="./img/icons/icon-ticket.png" alt="phim ddang chieu">
+                        <h4 class="ml6">
+                            <span class="text-wrapper">
+                                <span class="letters">Phim Đang Chiếu</span>
+                            </span>
+                        </h4>
+                    </a>
+                    <span class="border"></span>
+                </div>
+            </div>
+            <div  class="center__movie-top wow bounceInUp " data-wow-offset="100 " data-wow-duration="1s">       
+            
+            </div>
+        </div>
+    </div>
+    <div class="total"> 
+        <section class="container">
+            <div class="row pt-5">
+                <div class="col-lg-8 d-flex flex-column justify-content-around">
+                    <div class="navbar__news  d-flex flex-row justify-content-between pl-2 mb-3">
+                        <div class="news wow bounceInLeft" data-wow-duration="2.5s"data-wow-offset="0" >
+                            <span>News & Update </span>
+                        </div>
+                        <div class="event">
+                            <ul class="event__new d-flex justify-content-around ">
+                                <li class="wow bounceInLeft" data-wow-duration="2s">ALL</li>
+                                <li class="wow bounceInLeft" data-wow-duration="1.5s">Sự Kiện</li>
+                                <li class="wow bounceInLeft" data-wow-duration="1s">Đỉnh Cao</li>
+                                <li class="wow bounceInLeft" data-wow-duration="0.5s" >Sắp Ra Mắt</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div  class="review_movie wow bounceInLeft" data-wow-duration="2s" data-wow-delay="1.2s">
+                    </div>
+                </div>  
+                <div class="col-lg-4">
+                    <div class="social h-25 d-flex justify-content-betweend flex-column pt-4">
+                        <div class="social__media mb-3" ><p class="wow bounceInRight" data-wow-duration="0.8s">Social Media</p></div>
+                        <div class="social__net d-flex flex-column ">
+                            <ul class="d-flex w-100 justify-content-between  wow rollIn" data-wow-delay="0.5s" data-wow-duration="0.8s">
+                                <li class="color"><i class="fab fa-google"></i></li>
+                                <li>Google</li>
+                                <li>1,2k Follow</li>
+                            </ul>
+                            <ul class="d-flex w-100 justify-content-between  wow rollIn " data-wow-delay="0.8s" data-wow-duration="1s">
+                                <li class="color"><i class="fab  fa-facebook-f"></i></li>
+                                <li>Facebook</li>
+                                <li>153,7k Follow</li>
+                            </ul>
+                            <ul class="d-flex w-100 justify-content-between  wow rollIn" data-wow-delay="0.8s" data-wow-duration="1.5s">
+                                <li class="color"><i class="fab  fa-twitter"></i></li>
+                                <li>Twitter</li>
+                                <li>94,9k Follow</li>
+                            </ul>
+                            <ul class="d-flex w-100 justify-content-between  wow rollIn" data-wow-delay="0.9s" data-wow-duration="1.5s">
+                                <li class="color"><i class="fab  fa-youtube"></i></li>
+                                <li>Youtube</li>
+                                <li>5,5k Follow</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="news__movie">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</div>
+    <div id="paral"></div>
+   <news-movie></news-movie>
+    <footer-component></footer-component>
+<script> new WOW().init(); </script>
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAfXXO4D5G2hqSK0mQOKMYcSjoNod9MLPE",
+    authDomain: "reflixproject.firebaseapp.com",
+    databaseURL: "https://reflixproject.firebaseio.com",
+    projectId: "reflixproject",
+    storageBucket: "reflixproject.appspot.com",
+    messagingSenderId: "361220077013",
+    appId: "1:361220077013:web:610e37a3edf8c96a33395c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./js/render_data/renderData.js"></script>
+    <script src="./js/screens/index.js" type="module"></script>
+    <script src="./js/preloder/owlCarousel.js"></script>
+</body>
+</html>

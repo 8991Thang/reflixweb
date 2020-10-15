@@ -106,8 +106,17 @@ async function update(e){
         email : document.getElementById("email").value,
         address : document.getElementById("address").value,
     }
+    let adminUser = JSON.parse(localStorage.getItem("user"));
+    let passwordAdmin = [];
+    let psw = await firebase.firestore().collection("users").where("email","==",adminUser.email).get();
+    let inputPassword = Number(prompt("Vui lòng nhập mật khẩu ADMIN của bạn !!"));
+    if(psw.docs[0].data().password != inputPassword){
+        alert("Mật khẩu sai , xin bạn vui lòng nhập lại mật khẩu !!");
+                return;
+    }
     await firebase.firestore().collection("users").doc(e.id).update(data)
     .then(function(){
+        alert("Bạn đã cập nhật thành công");
         renderUser();
     })
 //     // console.log(e.id)

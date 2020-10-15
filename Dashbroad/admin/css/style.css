@@ -6366,10 +6366,7 @@
     -o-transform: rotate(0);
     transform: rotate(0);
     opacity: 1; } }
-.img-ava{
-  width: 68px;
-    height: 68px;
-}
+
 @-webkit-keyframes rotateInDownLeft {
   0% {
     -webkit-transform-origin: left bottom 50%;

@@ -31,7 +31,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
           <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo/l.png" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="#" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -40,16 +40,6 @@
               </div>
               <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
               <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
-                <a href="#" class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-settings text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
-                  </div>
-                </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
@@ -62,16 +52,6 @@
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item preview-item">
-                  <div class="preview-thumbnail">
-                    <div class="preview-icon bg-dark rounded-circle">
-                      <i class="mdi mdi-calendar-today text-success"></i>
-                    </div>
-                  </div>
-                  <div class="preview-item-content">
-                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
-                  </div>
-                </a>
               </div>
             </div>
           </li>
@@ -124,7 +104,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="#" alt="logo" /></a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -191,39 +171,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                   <h6 class="p-3 mb-0">Messages</h6>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
-                      <p class="text-muted mb-0"> 1 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
-                      <p class="text-muted mb-0"> 15 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
-                      <p class="text-muted mb-0"> 18 Minutes ago </p>
-                    </div>
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">4 new messages</p>
-                </div>
               </li>
               <li class="nav-item dropdown border-left">
                 <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
@@ -279,16 +226,6 @@
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                   <h6 class="p-3 mb-0">Profile</h6>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item">
-                    <div class="preview-thumbnail">
-                      <div class="preview-icon bg-dark rounded-circle">
-                        <i class="mdi mdi-settings text-success"></i>
-                      </div>
-                    </div>
-                    <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Settings</p>
-                    </div>
-                  </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
@@ -301,7 +238,6 @@
                     </div>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">Advanced settings</p>
                 </div>
               </li>
             </ul>
@@ -310,87 +246,23 @@
             </button>
           </div>
         </nav>
-        <form class="form-review">
-            <div class="form-div">
-                <div class="form-group">
-                    <label for="name">Tiêu Đề Reflix Review</label>
-                    <input type="text" class="form-control" id="name" placeholder="Review phim ...">
-                </div>
-                
-                    <div class="form-row">
-                      <div class="col-3">
-                        <input type="text" class="form-control" id ="onwer" placeholder="Đạo Diễn">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" id ="cast"placeholder="Cast">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control"  id ="make" placeholder="Hãng Sản Xuất">
-                      </div>
-                      <div class="col">
-                        <input type="text" class="form-control" onfocus="(this.type='date')"  id ="time" placeholder="Ngày Phát Hành">
-                      </div>
-                    </div>
-                    <div class="custom-file">
-                      <label class="custom-file-label" for="img">Ảnh Bìa Movie ...</label>
-                      <input type="file" class="custom-file-input" onchange="previewFile(this)" id="img" >
-                      <div class="center d-flex align-items-center justify-content-center"> 
-                        <img src="#" class="img" alt="">
-                      </div>
-                    </div>
-                    <div class="custom-file">
-                      <label class="custom-file-label" for="background">Ảnh BackGround Review ...</label>
-                      <input type="file" class="custom-file-input"onchange="previewFileBackGround(this)" id="background" >
-                      <div class="center d-flex align-items-center justify-content-center"> 
-                        <img src="#" class="background" alt="">
-                      </div>
-                    </div>
-                  <div class="form-group">
-                    <label for="content">Nội Dung</label>
-                    <textarea class="form-control" id="content" rows="5" placeholder="Nội dung phim ..."></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="trailer">Trailer Video Review</label>
-                    <input type="text" class="form-control" id="trailer" placeholder="Trailer Movie ...">
-                </div>
-                  <div class="custom-file">
-                    <label class="custom-file-label" for="img1">Ảnh Description 1 ...</label>
-                    <input type="file" class="custom-file-input"onchange="previewFile1(this)" id="img1" >
-                    <div class="center d-flex align-items-center justify-content-center"> 
-                      <img src="#" class="img1" alt="">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="des1">Description 1</label>
-                    <textarea class="form-control" id="des1" rows="5" placeholder="Nội dung description 1 ..."></textarea>
-                  </div>
-                  <div class="custom-file">
-                    <label class="custom-file-label" for="img2">Ảnh Description 2 ...</label>
-                    <input type="file" class="custom-file-input"  onchange="previewFile2(this)" id="img2" >
-                    <div class="center d-flex align-items-center justify-content-center"> 
-                      <img src="#" class="img2" alt="">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="des2">Description 2</label>
-                    <textarea class="form-control" id="des2" rows="5" placeholder="Nội dung description 2 ..."></textarea>
-                  </div>
-                  <div class="form-group">
-                    <div class="custom-file">
-                        <label class="custom-file-label" for="img3">Ảnh Description 3 ...</label>
-                        <input type="file" class="custom-file-input" onchange="previewFile3(this)" id="img3" >
-                        <div class="center d-flex align-items-center justify-content-center"> 
-                          <img src="#" class="img3" alt="">
-                        </div>
-                      </div>
-                    <label for="des3">Description 3</label>
-                    <textarea class="form-control" id="des3" rows="5" placeholder="Nội dung description 3 ..."></textarea>
-                  </div>
-
-                  <button class="btn btn-primary">Đăng Bài</button>
-            </div>
-          </form>
         <!-- main-panel ends -->
+        <div class="tables-container">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">UserName</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Chức Năng</th>
+                <th scope="col">Phân Quyền</th>
+              </tr>
+            </thead>
+            <tbody class="user-data">
+            </tbody>
+          </table>
+        </div>
       </div>
       <!-- page-body-wrapper ends -->
     </div>
@@ -435,7 +307,7 @@ if(!user){
 }
 
 </script>
-<script src="/Dashbroad/admin/js/newReview.js"></script>
+<script src="/Dashbroad/admin/js/userPQ.js"></script>
 
   </body>
 </html> 

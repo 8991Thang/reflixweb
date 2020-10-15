@@ -109,7 +109,7 @@ class IntroSelection extends BaseComponent {
                         <br>
                             <div style="text-align:center;padding-bottom : 60px;">
                                 <span class="dot"></span> 
-                                <span class="dot"></span> 
+                                <span class="dot"></span>   
                                 <span class="dot"></span> 
                                 <span class="dot"></span>
                                 <span class="dot"></span>

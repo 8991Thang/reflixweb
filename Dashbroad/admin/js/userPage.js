@@ -66,7 +66,7 @@ async function deleteUser(){
            if (inputPassword == psw.docs[0].data().password) {
                await firebase.firestore().collection("users").doc(email[0].id).delete();
                alert(" Bạn đã xóa user thành công !! ");
-               
+               renderUser();
            }
            
         })

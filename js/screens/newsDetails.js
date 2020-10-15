@@ -210,7 +210,7 @@ class NewsDetail extends BaseComponent {
                     </div>
                     <div class="nav__news d-flex justify-content-center">
                         <div>
-                        <a>Home</a>
+                        <a href="/index.html">Home</a>
                         <span class="dots"></span>
                         </div>
                         <span>|</span><p>Movie News</p>
@@ -225,13 +225,15 @@ class NewsDetail extends BaseComponent {
         `
         window.addEventListener("scroll",(e) => {
             let navPC = this._shadowRoot.querySelector(".suggest__news");
+           if(navPC){
             navPC.classList.toggle("fixed__suggest",window.scrollY > 1000);
+           }
         })
 
         //render news
-        this.renderNews();
+        this.renderNews(this.rederectPage);
     }
-    async renderNews(){
+    async renderNews(rederectPage){
         let id = localStorage.getItem("idNews");
         let db = await firebase.firestore().collection("news__movie").where("name","==",id).get();
         //render dom bacground img
@@ -245,8 +247,8 @@ class NewsDetail extends BaseComponent {
         let randomArr = Array.from(Array(data.length).keys());
         let random = [];
         random.push(shuffle(randomArr));
-        console.log(random);
-        this._shadowRoot.querySelector(".container__news").innerHTML = /*html*/ `
+        let ren = this._shadowRoot.querySelector(".container__news");
+        ren.innerHTML = /*html*/ `
         <div class="news__title">
                     <div>
                         <div class="title__news">
@@ -307,7 +309,7 @@ class NewsDetail extends BaseComponent {
                             </div>
                             <div>
                                 <div class="content-info">
-                                    <p>${data[random[0][0]].name}</p>
+                                    <p class="rederect">${data[random[0][0]].name}</p>
                                     <p>${data[random[0][0]].date} (GMT+7)</p>
                                 </div>
                             </div>
@@ -318,7 +320,7 @@ class NewsDetail extends BaseComponent {
                             </div>
                             <div>
                                 <div class="content-info">
-                                    <p>${data[random[0][1]].name}</p>
+                                    <p class="rederect">${data[random[0][1]].name}</p>
                                     <p>${data[random[0][1]].date} (GMT+7)</p>
                                 </div>
                             </div>
@@ -329,7 +331,7 @@ class NewsDetail extends BaseComponent {
                             </div>
                             <div>
                                 <div class="content-info">
-                                    <p>${data[random[0][2]].name}</p>
+                                    <p class="rederect">${data[random[0][2]].name}</p>
                                     <p>${data[random[0][2]].date} (GMT+7)</p>
                                 </div>
                             </div>
@@ -338,7 +340,17 @@ class NewsDetail extends BaseComponent {
                     </div>
                 </div>
             </div>
-        `   
+        `  
+        this.rederectPage();
+    }
+    rederectPage(){
+        let rederectClick = [...this._shadowRoot.querySelectorAll(".rederect")];
+        rederectClick.forEach(items => {
+            items.addEventListener("click",function(){
+                localStorage.setItem("idNews",this.innerText);
+                window.location.href = "/newsMovie.html"
+            })
+        })
     }
 }
 

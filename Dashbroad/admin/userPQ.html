@@ -16,8 +16,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
     <link rel="shortcut icon" type="image/png" href="../../img/logo/movie-website-2055755-1733976.png">
+
+
+
     <!-- Layout styles -->
     <link rel="stylesheet" href="/Dashbroad/admin/css/style.css">
+    <link rel="stylesheet" href="/Dashbroad/admin/css/style2.css">
+
     <!-- End layout styles -->
   </head>
   <body>
@@ -26,7 +31,7 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
           <a class="sidebar-brand brand-logo" href="index.html"><img src="/img/logo/l.png" alt="logo" /></a>
-          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="#" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
           <li class="nav-item profile">
@@ -35,6 +40,16 @@
               </div>
               <a href="#" id="profile-dropdown" data-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
               <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-settings text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">Account settings</p>
+                  </div>
+                </a>
                 <div class="dropdown-divider"></div>
                 <a href="#" class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
@@ -47,6 +62,16 @@
                   </div>
                 </a>
                 <div class="dropdown-divider"></div>
+                <a href="#" class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <div class="preview-icon bg-dark rounded-circle">
+                      <i class="mdi mdi-calendar-today text-success"></i>
+                    </div>
+                  </div>
+                  <div class="preview-item-content">
+                    <p class="preview-subject ellipsis mb-1 text-small">To-do list</p>
+                  </div>
+                </a>
               </div>
             </div>
           </li>
@@ -73,7 +98,7 @@
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="/Dashbroad/admin/totalReview.html">Tổng Hợp</a></li>
                 <li class="nav-item"> <a class="nav-link" href="/Dashbroad/admin/newReview.html">Thêm Bài Viết</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Chỉnh Sửa / Delete</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../admin/editReview.html">Chỉnh Sửa / Delete</a></li>
               </ul>
             </div>
           </li>
@@ -87,8 +112,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/Dashbroad/admin/userAdmin.html"> Tổng Hợp  </a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Phân Quyền</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../admin/userAdmin.html"> Tổng Hợp </a></li>
+                <li class="nav-item"> <a class="nav-link" href=""> Phân Quyền </a></li>
               </ul>
             </div>
           </li>
@@ -99,7 +124,7 @@
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar p-0 fixed-top d-flex flex-row">
           <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="#" alt="logo" /></a>
+            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
           </div>
           <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
             <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -124,8 +149,8 @@
                         <i class="mdi mdi-file-outline text-primary"></i>
                       </div>
                     </div>
-                    <div class="preview-item-content" onclick="rederect(this)">
-                      <p class="preview-subject ellipsis mb-1" >Bài Viết Review</p>
+                    <div class="preview-item-content">
+                      <p class="preview-subject ellipsis mb-1">Bài Viết Review</p>
                     </div>
                   </a>
                   <div class="dropdown-divider"></div>
@@ -169,7 +194,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="#" alt="image" class="rounded-circle profile-pic">
+                      <img src="assets/images/faces/face4.jpg" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="preview-subject ellipsis mb-1">Mark send you a message</p>
@@ -179,7 +204,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="#" alt="image" class="rounded-circle profile-pic">
+                      <img src="assets/images/faces/face2.jpg" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="preview-subject ellipsis mb-1">Cregh send you a message</p>
@@ -189,7 +214,7 @@
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
                     <div class="preview-thumbnail">
-                      <img src="" alt="image" class="rounded-circle profile-pic">
+                      <img src="assets/images/faces/face3.jpg" alt="image" class="rounded-circle profile-pic">
                     </div>
                     <div class="preview-item-content">
                       <p class="preview-subject ellipsis mb-1">Profile picture updated</p>
@@ -260,6 +285,9 @@
                         <i class="mdi mdi-settings text-success"></i>
                       </div>
                     </div>
+                    <div class="preview-item-content">
+                      <p class="preview-subject mb-1">Settings</p>
+                    </div>
                   </a>
                   <div class="dropdown-divider"></div>
                   <a class="dropdown-item preview-item">
@@ -272,6 +300,9 @@
                       <p class="preview-subject mb-1">Log out</p>
                     </div>
                   </a>
+                  <div class="dropdown-divider"></div>
+                  <p class="p-3 mb-0 text-center">Advanced settings</p>
+                </div>
               </li>
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
@@ -279,217 +310,86 @@
             </button>
           </div>
         </nav>
-        <!-- partial -->
-        <div class="main-panel">
-          <div class="content-wrapper">
-            <div class="row">
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">156.123</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                      </div>
+        <form class="form-review">
+            <div class="form-div">
+                <div class="form-group">
+                    <label for="name">Tiêu Đề Reflix Review</label>
+                    <input type="text" class="form-control" id="name" placeholder="Review phim ...">
+                </div>
+                
+                    <div class="form-row">
                       <div class="col-3">
-                        <div class="icon icon-box-success ">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
+                        <input type="text" class="form-control" id ="onwer" placeholder="Đạo Diễn">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" id ="cast"placeholder="Cast">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control"  id ="make" placeholder="Hãng Sản Xuất">
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" onfocus="(this.type='date')"  id ="time" placeholder="Ngày Phát Hành">
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Lượt Tuy Cập/Tháng</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0">798</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+11%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-success">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
+                    <div class="custom-file">
+                      <label class="custom-file-label" for="img">Ảnh Bìa Movie ...</label>
+                      <input type="file" class="custom-file-input" onchange="previewFile(this)" id="img" >
+                      <div class="center d-flex align-items-center justify-content-center"> 
+                        <img src="#" class="img" alt="">
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Lượt Tương Tác/Tháng</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0 user-length">0</h3>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">-2.4%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-danger">
-                          <span class="mdi mdi-arrow-bottom-left icon-item"></span>
-                        </div>
+                    <div class="custom-file">
+                      <label class="custom-file-label" for="background">Ảnh BackGround Review ...</label>
+                      <input type="file" class="custom-file-input"onchange="previewFileBackGround(this)" id="background" >
+                      <div class="center d-flex align-items-center justify-content-center"> 
+                        <img src="#" class="background" alt="">
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">USER</h6>
+                  <div class="form-group">
+                    <label for="content">Nội Dung</label>
+                    <textarea class="form-control" id="content" rows="5" placeholder="Nội dung phim ..."></textarea>
                   </div>
+                  <div class="form-group">
+                    <label for="trailer">Trailer Video Review</label>
+                    <input type="text" class="form-control" id="trailer" placeholder="Trailer Movie ...">
                 </div>
-              </div>
-              <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-9">
-                        <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0 length-cmt">0</h3>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="icon icon-box-success ">
-                          <span class="mdi mdi-arrow-top-right icon-item"></span>
-                        </div>
-                      </div>
+                  <div class="custom-file">
+                    <label class="custom-file-label" for="img1">Ảnh Description 1 ...</label>
+                    <input type="file" class="custom-file-input"onchange="previewFile1(this)" id="img1" >
+                    <div class="center d-flex align-items-center justify-content-center"> 
+                      <img src="#" class="img1" alt="">
                     </div>
-                    <h6 class="text-muted font-weight-normal">Comment</h6>
                   </div>
-                </div>
-              </div>
+                  <div class="form-group">
+                    <label for="des1">Description 1</label>
+                    <textarea class="form-control" id="des1" rows="5" placeholder="Nội dung description 1 ..."></textarea>
+                  </div>
+                  <div class="custom-file">
+                    <label class="custom-file-label" for="img2">Ảnh Description 2 ...</label>
+                    <input type="file" class="custom-file-input"  onchange="previewFile2(this)" id="img2" >
+                    <div class="center d-flex align-items-center justify-content-center"> 
+                      <img src="#" class="img2" alt="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="des2">Description 2</label>
+                    <textarea class="form-control" id="des2" rows="5" placeholder="Nội dung description 2 ..."></textarea>
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-file">
+                        <label class="custom-file-label" for="img3">Ảnh Description 3 ...</label>
+                        <input type="file" class="custom-file-input" onchange="previewFile3(this)" id="img3" >
+                        <div class="center d-flex align-items-center justify-content-center"> 
+                          <img src="#" class="img3" alt="">
+                        </div>
+                      </div>
+                    <label for="des3">Description 3</label>
+                    <textarea class="form-control" id="des3" rows="5" placeholder="Nội dung description 3 ..."></textarea>
+                  </div>
+
+                  <button class="btn btn-primary">Đăng Bài</button>
             </div>
-            <div class="row">
-              <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body list-cmt">
-                    <h4 class="card-title">Tổng Hợp Comment</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex flex-row justify-content-between">
-                      <h4 class="card-title mb-1">Những Bài Viết Gần Đây</h4>
-                      <p class="text-muted mb-1">Status</p>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="preview-list" id="list">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Thu Nhập</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$32123</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+3.5%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">11.38% So với tháng trước</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Quảng Cáo</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$850</h2>
-                          <p class="text-success ml-2 mb-0 font-weight-medium">+8.3%</p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal"> 9.61% So với tháng trước</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-wallet-travel text-danger ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-4 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h5>Purch</h5>
-                    <div class="row">
-                      <div class="col-8 col-sm-12 col-xl-8 my-auto">
-                        <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">$2039</h2>
-                          <p class="text-danger ml-2 mb-0 font-weight-medium">-2.1% </p>
-                        </div>
-                        <h6 class="text-muted font-weight-normal">2.27% So với tháng trước</h6>
-                      </div>
-                      <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
-                        <i class="icon-lg mdi mdi-monitor text-success ml-auto"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row ">
-              <div class="col-12 grid-margin">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">User Status</h4>
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </th>
-                            <th> User </th>
-                            <th> Chức Năng </th>
-                            <th>Email</th>
-                            <th>Địa Chỉ</th>
-                            <th>Login</th>
-                            <th>Trạng Thái</th>
-                          </tr>
-                        </thead>
-                        <tbody class="status">
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>    
-          <!-- content-wrapper ends -->
-          <!-- partial:partials/_footer.html -->
-          <footer class="footer">
-            <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019 <a href="/" target="_blank">Reflix</a>. All rights reserved.</span>
-              <span class="text-muted float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart text-danger"></i></span>
-            </div>
-          </footer>
-          <!-- partial -->
-        </div>
+          </form>
         <!-- main-panel ends -->
       </div>
       <!-- page-body-wrapper ends -->
@@ -517,10 +417,11 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
  // get status user information
-
- let user = JSON.parse(localStorage.getItem("user"));
+</script>
+<script>
+  let user = JSON.parse(localStorage.getItem("user"));
 if(user){
-async function adminUser(){
+  async function adminUser(){
   let adUser = await firebase.firestore().collection("users").where("email","==",user.email).get();
       if (!adUser.docs[0].data().admin) {
          window.location.href = "/index.html";
@@ -533,102 +434,8 @@ if(!user){
   window.location.href = "/index.html";
 }
 
-let statusUser = document.querySelector(".status");
-async function getUser(){
-  let secondsTime = document.querySelector(".seconds-time");
-  statusUser.innerHTML = '';  
-let respon = await firebase.firestore().collection("status").onSnapshot((querySnapShot) => {
-
-  for ( let doc of querySnapShot.docs){
-    if(!doc.data()){
-      return;
-    }
-    function renderTime(){
-      const dateTime = document.querySelector(".date-time");
-    let member = doc.data().admin == "true" ? `ADMIN` : `MEMBER`
-    statusUser.innerHTML += /*html*/`
-                            <tr>
-                            <td>
-                              <div class="form-check form-check-muted m-0">
-                                <label class="form-check-label">
-                                  <input type="checkbox" class="form-check-input">
-                                </label>
-                              </div>
-                            </td>
-                            <td>
-                              <img src="${doc.data().avatar}" alt="image" />
-                              <span class="pl-2">${doc.data().name}</span>  
-                            </td>
-                            <td>${member}</td>
-                            <td>${doc.data().user}</td>
-                            <td class="date-time">${doc.data().address}</td>
-                            <td class="seconds-time"></td>
-                            <td>
-                              <div class="badge badge-outline-success">Đang Truy Cập</div>
-                            </td>
-                          </tr>`;
-                        }
-                        renderTime();
-                        runTime(doc.data().time.seconds);
-  }
-});
-function runTime(timeTotal){
-      let seconds = Math.floor(((Date.now() / 1000) - timeTotal) % 60);
-      let minutes = Math.floor(seconds / 60);
-      let hour = Math.floor(minutes / 60);
-      let days = minutes / 60 % 24;
-      document.querySelector('.seconds-time').innerText = seconds;
-      console.log(seconds)
-
-      return seconds;
-    }
- setInterval(runTime,1000);
-}
-getUser()
-
-async function renderUserLength(){
-  let usersData = []
-  let userDb = await firebase.firestore().collection("users").get();
-  for ( let doc of userDb.docs){
-    usersData.push(doc.data());
-  }
-  document.querySelector('.user-length').innerText = usersData.length;
-}
-renderUserLength();
-async function renderCmt(){
-  let dbfirebase = await firebase.firestore().collection("review_moive").onSnapshot(querySnapShot => {
-    let dataCmt = [];
-    for ( let doc of querySnapShot.docs){
-      dataCmt.push(doc.data());
-    }
-   let showData = dataCmt.filter(cmt => cmt.commentTotal.length > 0);
-   let filterData = showData.map(x => x.commentTotal);
-   let previewList = document.querySelector(".list-cmt");
-   let lengthCmt = 0;
-   filterData.forEach(items => {
-     lengthCmt += items.length;
-      items.forEach(render => {
-      previewList.innerHTML += /*html*/`
-      <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
-                      <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">${render.name}</h6>
-                        <p class="text-muted mt-3">Name : <b>${render.username}.</b></p>
-                        <p class="text-muted mb-2">Nội Dung : <b> ${render.content}.</b></p>
-                        </div>
-                        <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
-                          <img style="width: 68px;height: 68px;" class ="img-ava" src="${render.avatar}">
-                          </div>
-                          </div>
-                          `
-                          // console.log(Object.key(render))
-    })
-   })
-   document.querySelector('.length-cmt').innerText = lengthCmt;
-  })
- 
-}
-renderCmt();
 </script>
-<script src="/Dashbroad/admin/js/app.js"></script>
+<script src="/Dashbroad/admin/js/newReview.js"></script>
+
   </body>
-</html>
+</html> 

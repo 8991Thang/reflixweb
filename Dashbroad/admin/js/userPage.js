@@ -1,5 +1,4 @@
 if(user){
-
 let profile = document.querySelector(".profile-pic");
   profile.innerHTML = /*html*/ `
     <div class="count-indicator">

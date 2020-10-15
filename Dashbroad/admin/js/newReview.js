@@ -1,4 +1,3 @@
-let user = JSON.parse(localStorage.getItem("user"));
 if(user){
   let profile = document.querySelector(".profile-pic");
 profile.innerHTML = /*html*/ `

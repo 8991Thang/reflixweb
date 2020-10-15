@@ -244,14 +244,13 @@ class Login extends BaseComponent {
       loginUser(dataUser);
     };
      async function loginUser(data){
-      const resultEmail = await firebase.firestore().collection("users")
+      let resultEmail = await firebase.firestore().collection("users")
       .where("email","==", data.email)
       .get();
-      const result = await firebase.firestore().collection("users")
+      let result = await firebase.firestore().collection("users")
       .where("email","==", data.email)
       .where("password","==", data.password)
       .get();
-
       if(resultEmail.empty){
         (data.emailErr).setAttribute("error", "Email does not exist");
         return;

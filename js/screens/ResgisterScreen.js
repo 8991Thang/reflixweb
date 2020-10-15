@@ -316,21 +316,19 @@ class Register extends BaseComponent {
       } 
       addUser(dataUser);
     };
-       
-    $: firebase = firebase.firestore().collection("users");
-    
-    async function addUser(data){
-      await firebase.add(data);
-      alert("Register Sucessfully");
-      window.location.href = "/index2.html#!/login";
-    }
     async function readData(){
-      const result = await firebase.get();
+      const result = await firebase.firestore().collection("users").get();
       for (let doc of result.docs){
         resultEmail.push(doc.data().email);
       }
     }
     readData();
+    async function addUser(data){
+      await firebase.firestore().collection("users").add(data);
+      alert("Register Sucessfully");
+      window.location.href = "/index2.html#!/login";
+    }
+    
   }
 }
 

@@ -21,7 +21,7 @@
 
     <!-- Layout styles -->
     <link rel="stylesheet" href="/Dashbroad/admin/css/style.css">
-    <link rel="stylesheet" href="/Dashbroad/admin/css/style3.css">
+    <link rel="stylesheet" href="/Dashbroad/admin/css/style2.css">
 
     <!-- End layout styles -->
   </head>
@@ -291,83 +291,83 @@
           </div>
         </nav>
         <!-- main-panel ends -->
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <div class="container__edit">
                 <form class="form-review">
                     <div class="form-div">
                         <div class="form-group">
                             <label for="name">Tiêu Đề Reflix Review</label>
-                            <input type="text" class="form-control" id="name" placeholder="Review phim ...">
+                            <textarea  type="text" class="form-control .font" id="name" placeholder="Review phim ..."> </textarea>
                         </div>
                         
                             <div class="form-row">
                               <div class="col-3">
-                                <input type="text" class="form-control" id ="onwer" placeholder="Đạo Diễn">
+                                <input type="text" class="form-control .font" id ="onwer" placeholder="Đạo Diễn">
                               </div>
                               <div class="col">
-                                <input type="text" class="form-control" id ="cast"placeholder="Cast">
+                                <input type="text" class="form-control .font" id ="cast"placeholder="Cast">
                               </div>
                               <div class="col">
-                                <input type="text" class="form-control"  id ="make" placeholder="Hãng Sản Xuất">
+                                <input type="text" class="form-control .font"  id ="make" placeholder="Hãng Sản Xuất">
                               </div>
                               <div class="col">
-                                <input type="text" class="form-control" onfocus="(this.type='date')"  id ="time" placeholder="Ngày Phát Hành">
+                                <input type="text" class="form-control .font" onfocus="(this.type='date')"  id ="time" placeholder="Ngày Phát Hành">
                               </div>
                             </div>
                             <div class="custom-file">
                               <label class="custom-file-label" for="img">Ảnh Bìa Movie ...</label>
                               <input type="file" class="custom-file-input" onchange="previewFile(this)" id="img" >
                               <div class="center d-flex align-items-center justify-content-center"> 
-                                <img src="#" class="img" alt="">
+                                <img src="#" style="width:500px" class="img" alt="">
                               </div>
                             </div>
                             <div class="custom-file">
                               <label class="custom-file-label" for="background">Ảnh BackGround Review ...</label>
                               <input type="file" class="custom-file-input"onchange="previewFileBackGround(this)" id="background" >
                               <div class="center d-flex align-items-center justify-content-center"> 
-                                <img src="#" class="background" alt="">
+                                <img src="#"  style="width:500px" class="background" alt="">
                               </div>
                             </div>
                           <div class="form-group">
                             <label for="content">Nội Dung</label>
-                            <textarea class="form-control" id="content" rows="5" placeholder="Nội dung phim ..."></textarea>
+                            <textarea class="form-control .font" id="content" rows="5" placeholder="Nội dung phim ..."></textarea>
                           </div>
                           <div class="form-group">
                             <label for="trailer">Trailer Video Review</label>
-                            <input type="text" class="form-control" id="trailer" placeholder="Trailer Movie ...">
+                            <input type="text" class="form-control .font" id="trailer" placeholder="Trailer Movie ...">
                         </div>
                           <div class="custom-file">
                             <label class="custom-file-label" for="img1">Ảnh Description 1 ...</label>
                             <input type="file" class="custom-file-input"onchange="previewFile1(this)" id="img1" >
                             <div class="center d-flex align-items-center justify-content-center"> 
-                              <img src="#" class="img1" alt="">
+                              <img src="#" style="max-width:400px" class="img1" alt="">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="des1">Description 1</label>
-                            <textarea class="form-control" id="des1" rows="5" placeholder="Nội dung description 1 ..."></textarea>
+                            <textarea class="form-control .font" id="des1" rows="5" placeholder="Nội dung description 1 ..."></textarea>
                           </div>
                           <div class="custom-file">
                             <label class="custom-file-label" for="img2">Ảnh Description 2 ...</label>
                             <input type="file" class="custom-file-input"  onchange="previewFile2(this)" id="img2" >
                             <div class="center d-flex align-items-center justify-content-center"> 
-                              <img src="#" class="img2" alt="">
+                              <img src="#" style="max-width:400px" class="img2" alt="">
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="des2">Description 2</label>
-                            <textarea class="form-control" id="des2" rows="5" placeholder="Nội dung description 2 ..."></textarea>
+                            <textarea class="form-control .font" id="des2" rows="5" placeholder="Nội dung description 2 ..."></textarea>
                           </div>
                           <div class="form-group">
                             <div class="custom-file">
                                 <label class="custom-file-label" for="img3">Ảnh Description 3 ...</label>
                                 <input type="file" class="custom-file-input" onchange="previewFile3(this)" id="img3" >
                                 <div class="center d-flex align-items-center justify-content-center"> 
-                                  <img src="#" class="img3" alt="">
+                                  <img src="#" style="max-width:400px"   class="img3" alt="">
                                 </div>
                               </div>
                             <label for="des3">Description 3</label>
-                            <textarea class="form-control" id="des3" rows="5" placeholder="Nội dung description 3 ..."></textarea>
+                            <textarea class="form-control .font" id="des3" rows="5" placeholder="Nội dung description 3 ..."></textarea>
                           </div>
         
                           <button class="btn btn-primary">Đăng Bài</button>

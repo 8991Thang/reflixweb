@@ -86,3 +86,15 @@ label{
 .table{
     margin-top:100px;
 }
+.font{
+    font-size:20px;
+}
+input{
+    height: auto !important;
+}
+textarea{
+    height: auto !important;
+}
+.container-fluid{
+    height: auto !important;
+}

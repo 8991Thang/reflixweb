@@ -1387,12 +1387,14 @@ class Header extends BaseComponent {
 	let showCmT = [];
     for (let i of dbData.docs) {
       let dataCommentTotal = i.data().commentTotal;
-      for (let i of dataCommentTotal){
-		  if (i.email == data.email) {
-			dataCmt.push(i.email);
-			showCmT.push(i);
-        }
-      }
+      if(dataCommentTotal){
+		for (let i of dataCommentTotal){
+			if (i.email == data.email) {
+			  dataCmt.push(i.email);
+			  showCmT.push(i);
+		  }
+		}
+	  }
     }
     let numberComments = (this._shadowRoot.querySelector(".number").innerText =
 	  dataCmt.length);

@@ -227,24 +227,27 @@ class ReviewMovie extends BaseComponent {
             let dbCmt = await firebase.firestore().collection("review_moive").where("name","==",id).get();
                 for ( let db of dbCmt.docs){
                     let dbCmt = db.data().commentTotal;
-                    userComment.innerHTML="";
-                    for ( let i of dbCmt){
-                        userComment.innerHTML += /*html*/`
-                    <div class="d-flex">
-                    <div>
-                    <img class="img-avatar" src="${i.avatar}" alt="">
-                    </div>  
-                <div  class="user__">
-                    <div class="__user-name">${i.username}</div>
-                    <div class="__user-cmt">${i.content}</div>
-                <div class="__user-action">
-                    <p class="like">Thích.</p>
-                    <p class="numberLike">0 </p>
-                    <p> / ${i.time}.</p>
-                </div>
-                </div>
-                </div>
-                `
+                    if(dbCmt){
+                        userComment.innerHTML="";
+                        for ( let i of dbCmt){
+                            userComment.innerHTML += /*html*/`
+                        <div class="d-flex">
+                        <div>
+                        <img class="img-avatar" src="${i.avatar}" alt="">
+                        </div>  
+                    <div  class="user__">
+                        <div class="__user-name">${i.username}</div>
+                        <div class="__user-cmt">${i.content}</div>
+                    <div class="__user-action">
+                        <p class="like">Thích.</p>
+                        <p class="numberLike">0 </p>
+                        <p> / ${i.time}.</p>
+                    </div>
+                    </div>
+                    </div>
+                    `
+                    }
+                    
                     }
                 }
         }

@@ -86,7 +86,10 @@ class IntroSelection extends BaseComponent {
                     <div class="container_body-center">
                         <div class="row"></div>
                         <div class="slideshow-container">
-                        <div class="mySlides fade">
+                            <div class="mySlides fade">
+                                <img src="/img/background/papoppp.jpg"/>
+                            </div>
+                            <div class="mySlides fade">
                                 <img src="./img/background/1920x1080-11.jpg"/>
                             </div>
                             <div class="mySlides fade">
@@ -105,6 +108,7 @@ class IntroSelection extends BaseComponent {
                         <br>
                         <br>
                             <div style="text-align:center;padding-bottom : 60px;">
+                                <span class="dot"></span> 
                                 <span class="dot"></span> 
                                 <span class="dot"></span> 
                                 <span class="dot"></span>

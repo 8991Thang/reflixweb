@@ -65,6 +65,9 @@ const style = /*html*/ `
     margin: 0 20px;
     cursor: pointer;
 }
+.nav__news a:nth-child(1):hover{
+    text-decoration: none !important;
+}
 .dots{
     height:2px;
     background:#76c100;

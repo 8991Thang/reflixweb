@@ -42,8 +42,8 @@ async function renderCardMovie(){
                       <li class="list-group-item">Ngày Đăng : ${doc.data().time}</li>
                     </ul>
                     <div class="card-body btn">
-                        <button id="${doc.id}" class="btn btn-outline-danger delete"onclick="deleteCard(this)" >Xoá</button>
-                        <button class="btn btn-outline-success"> Chỉnh Sửa</button>
+                        <button id="${doc.id}" class="btn btn-outline-danger delete" onclick="deleteCard(this)" >Xoá</button>
+                        <button name="${doc.data().name}" class="btn btn-outline-success" onclick="change(this)"> Chỉnh Sửa</button>
                     </div>
                   </div>
         
@@ -81,7 +81,12 @@ async function deleteCard(event){
     
   } else {
     return;
-  }   
+  }
+}
+
+async function change(e){
+  localStorage.setItem("nameEdit",e.name);
+  window.location.href="/Dashbroad/admin/editReview.html"
 }
 
 

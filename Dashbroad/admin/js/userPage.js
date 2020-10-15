@@ -47,9 +47,7 @@ async function renderUser (deleteUser){
         `
         dbDataUser.push({email : doc.data().email, password : doc.data().password, id:doc.id});
     }
-    if(document.querySelectorAll(".delete")){
-        deleteUser();
-    }
+    deleteUser();
 }
 renderUser(deleteUser);
 async function deleteUser(){
@@ -69,13 +67,14 @@ async function deleteUser(){
            if (inputPassword == psw.docs[0].data().password) {
                await firebase.firestore().collection("users").doc(email[0].id).delete();
                alert(" Bạn đã xóa user thành công !! ");
-               renderUser();
+               
            }
            
         })
     })
    }
 }
+
 
 function edit(e){
     e.parentNode.parentNode.innerHTML = /*html*/`

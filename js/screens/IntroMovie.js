@@ -380,6 +380,7 @@ class IntroMovie extends BaseComponent {
         })
         if(dataLike[0] !== undefined){
             dataLike[0].forEach(x => {
+                console.log(dataLike[0]);
                 if(x.name == movieLike){
                     this._shadowRoot.querySelector(".heart").style.color = "red";
                     localStorage.setItem("true",true);

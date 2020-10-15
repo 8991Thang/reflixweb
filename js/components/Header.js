@@ -156,11 +156,27 @@ a{
 }
 .user-panel a {
     color: #fff;
-    font-family: 'Roboto', sans-serif;
+	position: relative;
 }
-
-.user-panel a:hover {
-	color: red;
+.user-panel a:hover{
+	transform: scale(1.3)
+}
+.user-panel a:hover .hv-l{
+	width: 100%;
+	opacity: 1;
+	visibility: visible;
+}
+.hv-l{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	width: 0%;
+	height:13%;
+	border-radius:14px;
+	background-color: #ea3b92 !important;
+	bottom: -9px;
+	left: 0;
+	transition: all 0.5s ease;
 }
 
 .main-menu {
@@ -893,7 +909,7 @@ class Header extends BaseComponent {
     }
     var userName = data
       ? `${dataUser}`
-      : ` <div class="login"><a href="/index2.html#!/login">Login</a> / <a href="/index2.html#!/register">Register</a> </div>`;
+      : ` <div class="login"><a href="/index2.html#!/login">Login<span class="hv-l"></span></a> / <a href="/index2.html#!/register">Register<span class="hv-l"></span></a> </div>`;
 
     this._shadowRoot.innerHTML = /*html*/ `
 		<!-- Page Preloder -->
@@ -1282,6 +1298,7 @@ class Header extends BaseComponent {
 			 await firebase.firestore().collection("status").doc(remove).delete()
 			 .then(function (){
 				localStorage.removeItem("user");
+				localStorage.removeItem("true");
 				location.reload();
 			 })
             });
